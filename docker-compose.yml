@@ -1,0 +1,7 @@
+version: "3.4"
+services:
+  s_redis:
+    container_name: "ct_redis"
+    image: redis
+    ports:
+      - 6379:6379
