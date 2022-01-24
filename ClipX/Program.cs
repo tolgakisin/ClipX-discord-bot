@@ -115,7 +115,7 @@ namespace ClipX
 
         async static Task<List<Clip>> GetClipsAsync(Auth auth, string userId)
         {
-            var startedAt = DateTime.UtcNow.AddDays(-5).Date.ToString("O");
+            var startedAt = DateTime.UtcNow.Date.ToString("O");
             var endedAt = DateTime.UtcNow.AddDays(1).Date.ToString("O");
             string clipUri = Constants.TwitchConstants.API_URL + $"/clips?broadcaster_id={userId}&started_at={startedAt}&ended_at={endedAt}";
             var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, clipUri);
